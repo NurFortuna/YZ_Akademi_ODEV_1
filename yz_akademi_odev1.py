@@ -4,7 +4,8 @@ def compareTriplets(alice,bob):
     score=[]
     alice_score=0
     bob_score=0
-   
+    
+    
     try:
         #contains 3 integers and number of item is equal
         if (len(alice)!=len(bob) and len(alice)!=3):
@@ -35,22 +36,21 @@ def compareTriplets(alice,bob):
     return score
 
 
-print(compareTriplets([71,28,30],[99,16,8]))
+def inputs():
+    alice=[]
+    bob=[]
+    for i in range(3):
+        alice.append(int(input(str(i)+" alice: ")))
+    
+    for i in range(3):
+        bob.append(int(input(str(i)+"  bob: ")))
         
-            
-            
-        
-        
-        
-    
-    
-        
-        
-    
-    
-    
-    
-    
-    
+    return alice,bob
     
 
+
+alice,bob=inputs()
+
+print(compareTriplets(alice,bob))
+        
+            
